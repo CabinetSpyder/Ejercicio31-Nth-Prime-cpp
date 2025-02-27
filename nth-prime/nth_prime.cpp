@@ -5,18 +5,21 @@ namespace nth_prime {
 
 
     bool is_prime(long int n){
-        if(n==0){
-            throw std::domain_error("Error: 0 is not consider prime");
-
-        }else{
-            for(int i{2}; i<=sqrt(n); i ++){ 
-                if(n % i == 0){
-                    return false; // No es primo
-                }
-            }
+        
+        if (n < 2) return false; // Los números menores que 2 no son primos
+        if (n == 2 || n == 3) return true; // 2 y 3 son primos
+        if (n % 2 == 0 || n % 3 == 0) return false; // Eliminamos múltiplos de 2 y 3
+        
+        //Raiz cuadrada fuera para evitar recalcularla con cada iteracion
+        int limite = std::sqrt(n); // Solo iteramos hasta la raíz cuadrada
+        
+        for (int i = 5; i <= limite; i += 2) { // Probamos solo impares (evitamos pares)
+            if (n % i == 0) return false;
         }
 
         return true;
+
+        
     }
 
     long int nth(long int n){
@@ -26,7 +29,7 @@ namespace nth_prime {
         int last_prime_numb{0};
 
         if(n <= 0){
-            throw std::domain_error("No existe un numero primo numero 0");
+            throw std::domain_error("No existe un numero primo numero 0, ni negativo");
         }
 
         while(number_count != n){
