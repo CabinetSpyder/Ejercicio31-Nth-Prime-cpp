@@ -1,0 +1,4 @@
+/home/atlasvbox/exercism/cpp/Ejercicio31-Nth-Prime-cpp/nth-prime/build/CMakeFiles/nth-prime.dir
+/home/atlasvbox/exercism/cpp/Ejercicio31-Nth-Prime-cpp/nth-prime/build/CMakeFiles/test_nth-prime.dir
+/home/atlasvbox/exercism/cpp/Ejercicio31-Nth-Prime-cpp/nth-prime/build/CMakeFiles/edit_cache.dir
+/home/atlasvbox/exercism/cpp/Ejercicio31-Nth-Prime-cpp/nth-prime/build/CMakeFiles/rebuild_cache.dir
